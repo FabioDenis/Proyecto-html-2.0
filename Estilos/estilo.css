@@ -18,169 +18,135 @@
     list-style: none;
 }
 */
-html{
-    width: 100%;
-    height: 100%;
+html {
+  width: 100%;
+  height: 100%;
 }
 
 /*Modifico el estilo de Boostrap para el Navbar*/
 
-#navbarNav{
-    padding-left: 25%;
-
+#navbarNav {
+  padding-left: 25%;
 }
-.navbar-brand{
-    font-size: 30px;
+.navbar-brand {
+  font-size: 30px;
 }
-.bg-body-tertiary{
-    background-color: #dadada !important;
-
+.bg-body-tertiary {
+  background-color: #dadada !important;
 }
 
-.navbar-brand{
-    margin-left: 6%;
+.navbar-brand {
+  margin-left: 6%;
 }
 
 /*Fuente del titulo del navbar*/
-.navbar-brand{
-    
-    font-family: 'Carter One' , cursive;
-
-
+.navbar-brand {
+  font-family: "Carter One", cursive;
 }
 
 /*Main */
-main{
-    width: 100%;
+main {
+  width: 100%;
 }
 
-.index-contenedor-h1-eslogan{
-   
-    padding-left: 10%;
-    padding-right: 10%;
-    display: flex;
-   
-    padding: 10%;
-}
-.display-4{
-    padding: 1%;
-    font-family: 'Carter One', cursive !important; 
-    border:solid 2px #dadada  !important;
+.index-contenedor-h1-eslogan {
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
 
+  padding: 10%;
 }
-
+.display-4 {
+  padding: 1%;
+  font-family: "Carter One", cursive !important;
+  border: solid 2px #dadada !important;
+}
 
 /*Modificando el Footer de Boostrap*/
 
-
-
 /*Tabla de Productos*/
-.contenedor-tabla_productos{
-    margin-top: 0%;
+.contenedor-tabla_productos {
+  margin-top: 0%;
 }
-
-
-
-
 
 /*Imagenes del box de productos*/
 
-  .div-primerImagen-boxProductos{
-    width: 100%;
-    margin-top: 8%;
-   padding-left:25%;
-   padding-right:25%;
-   padding-bottom: 25%;
-
-  }
-
-  .img-fluid{
-    
-    
-   
-    max-width: 100%;
-    height: auto;
-
+.div-primerImagen-boxProductos {
+  width: 100%;
+  margin-top: 8%;
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-bottom: 25%;
 }
 
-
-
-
-
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
 
 /*Texto de los productos*/
-  .fs-1{
-    font-family: 'Josefin Sans', sans-serif !important; 
-    margin-bottom: 0%;
-    text-align: center;
+.fs-1 {
+  font-family: "Josefin Sans", sans-serif !important;
+  margin-bottom: 0%;
+  text-align: center;
 }
-.fs-4{
-    font-family: 'Josefin Sans', sans-serif !important; 
-    margin-bottom: 0%;
-    text-align: center;
+.fs-4 {
+  font-family: "Josefin Sans", sans-serif !important;
+  margin-bottom: 0%;
+  text-align: center;
 }
 
 /*Imagenes en carrusel de la ficha del producto*/
 
-.contenedor-imagenes-ficha_producto{
-    display: flex;
-
+.contenedor-imagenes-ficha_producto {
+  display: flex;
 }
-.div-carrusel-ficha_producto{
-    width: 100%;
-  
-
-
+.div-carrusel-ficha_producto {
+  width: 100%;
 }
-
 
 /*Botones para cambiar la imagen del carrusel en la ficha del producto*/
 .carousel-control-next {
-    right: 30%;
+  right: 30%;
 }
 .carousel-control-prev {
-    left: 10%;
+  left: 10%;
 }
 /*----------------------------------------------------------------------*/
 
 /*Acomodar el tamaño de la imagen en la ficha del producto*/
 .w-100 {
-    
-        width: 100% !important;
-        padding-left: 15%;
-        padding-right: 35%;
-        padding-bottom: 15%;
-        margin-top: 7%;
-    
+  width: 100% !important;
+  padding-left: 15%;
+  padding-right: 35%;
+  padding-bottom: 15%;
+  margin-top: 7%;
 }
 /*------------------------------------------------------------------------*/
 
-
 /*Texto que va al lado del carrusel en la ficha del producto*/
-.contenedor-Texto-ficha_producto{
-    margin-left: -30%;
-
+.contenedor-Texto-ficha_producto {
+  margin-left: -30%;
 }
-.div-texto-ficha_producto{
-    padding: 30%;
-
+.div-texto-ficha_producto {
+  padding: 30%;
 }
 /*----------------------------------------------------------*/
 /*Color del boton COMPRAR en ficha_productos*/
 .btn-primary {
-    --bs-btn-color: #fff;
-    --bs-btn-bg: #070707;
-    --bs-btn-border-color: #050506;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #dadada;
-    --bs-btn-hover-border-color: #dadada;
-    --bs-btn-focus-shadow-rgb: 49,132,253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #dadada;
-    --bs-btn-active-border-color: #0a53be;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #0d6efd;
-    --bs-btn-disabled-border-color: #0d6efd;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #070707;
+  --bs-btn-border-color: #050506;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #dadada;
+  --bs-btn-hover-border-color: #dadada;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #dadada;
+  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #0d6efd;
+  --bs-btn-disabled-border-color: #0d6efd;
 }
 /*------------------------------------------------------------------------*/
