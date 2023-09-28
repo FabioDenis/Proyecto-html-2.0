@@ -58,11 +58,23 @@ main {
 }
 .display-4 {
   padding: 1%;
-  font-family: "Carter One", cursive !important;
+  font-family: "Carter One", cursive;
+  font-family: "Poppins", sans-serif;
   border: solid 2px #dadada !important;
+  font-weight: bold;
+}
+.p-texto-eslogan {
+  font-family: "Carter One", cursive;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
 }
 
 /*Modificando el Footer de Boostrap*/
+.card-text-center {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
 
 /*Tabla de Productos*/
 .contenedor-tabla_productos {
@@ -86,7 +98,8 @@ main {
 
 /*Texto de los productos*/
 .fs-1 {
-  font-family: "Josefin Sans", sans-serif !important;
+  font-family: "Carter One", cursive;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 0%;
   text-align: center;
 }
@@ -105,32 +118,26 @@ main {
   width: 100%;
 }
 
-/*Botones para cambiar la imagen del carrusel en la ficha del producto*/
-.carousel-control-next {
-  right: 30%;
-}
-.carousel-control-prev {
-  left: 10%;
-}
-/*----------------------------------------------------------------------*/
-
-/*Acomodar el tamaño de la imagen en la ficha del producto*/
-.w-100 {
-  width: 100% !important;
-  padding-left: 15%;
-  padding-right: 35%;
-  padding-bottom: 15%;
-  margin-top: 7%;
-}
-/*------------------------------------------------------------------------*/
-
 /*Texto que va al lado del carrusel en la ficha del producto*/
 .contenedor-Texto-ficha_producto {
-  margin-left: -30%;
+  margin-left: 0%;
 }
 .div-texto-ficha_producto {
-  padding: 30%;
+  padding: 15%;
 }
+/*Texto Remera y precio de la ficha producto*/
+.h3,
+h3 {
+  font-size: calc(1.3rem + 0.6vw);
+  font-family: "Carter One", cursive;
+  font-family: "Poppins", sans-serif;
+}
+.fw-semibold {
+  font-weight: 600 !important;
+  font-family: "Carter One", cursive;
+  font-family: "Poppins", sans-serif;
+}
+/*--------------------------------------------*/
 /*----------------------------------------------------------*/
 /*Color del boton COMPRAR en ficha_productos*/
 .btn-primary {
@@ -150,3 +157,164 @@ main {
   --bs-btn-disabled-border-color: #0d6efd;
 }
 /*------------------------------------------------------------------------*/
+
+/*Estilos Formulario Compra*/
+
+.g-3,
+.gy-3 {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+/*-----------------------------------------------*/
+
+/*Carrusel Index*/
+
+.carrusel-index {
+  width: 100%;
+  height: 10em;
+  -webkit-scrollbar {
+    display: none;
+  }
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.cuadros {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease;
+  animation: carrusel 20s infinite linear;
+  /* Añade esta línea */
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.controles {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+}
+
+.controles label {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#slide1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#slide2:checked ~ .slides {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slides {
+  transform: translateX(-200%);
+}
+
+#slide4:checked ~ .slides {
+  transform: translateX(-300%);
+}
+
+/* Controla la transformación horizontal  */
+@keyframes carrusel {
+  0% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  45% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+
+  95% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/*Carrusel ficha_producto con js*/
+
+.container-carrusel-ficha_producto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.imagen_grande1 {
+  width: 30em;
+}
+.imagen_grande2 {
+  width: 30em;
+}
+.imagen_grande3 {
+  width: 30em;
+}
+.imagen_grande4 {
+  width: 30em;
+}
+
+.imagenesC {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagen-item {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.imagen-item:first-child {
+  display: block; /* Mostrar la primer imagen por defecto */
+}
