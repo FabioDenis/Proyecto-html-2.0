@@ -41,7 +41,8 @@ html {
 
 /*Fuente del titulo del navbar*/
 .navbar-brand {
-  font-family: "Carter One", cursive;
+  font-family: "Carter One", cursive !important;
+  font-family: "Poppins", sans-serif;
 }
 
 /*Main */
@@ -318,3 +319,47 @@ button {
 .imagen-item:first-child {
   display: block; /* Mostrar la primer imagen por defecto */
 }
+
+/*Estilos plugin pop up Jquery*/
+
+#mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9000;
+  background-color: #000;
+  display: none;
+}
+
+#boxes .window {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 440px;
+  height: 200px;
+  display: none;
+  z-index: 9999;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+#boxes #dialog {
+  width: 750px;
+  height: 300px;
+  padding: 10px;
+  background-color: #dadada;
+  font-family: "Carter One", cursive !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 15pt;
+}
+
+#popupfoot {
+  font-size: 15pt;
+  position: absolute;
+  bottom: 0px;
+  width: 250px;
+  left: 250px;
+}
+
+/**/
