@@ -22,6 +22,11 @@ html {
   width: 100%;
   height: 100%;
 }
+body{
+
+}
+
+
 
 /*Modifico el estilo de Boostrap para el Navbar*/
 
@@ -33,6 +38,8 @@ html {
 }
 .bg-body-tertiary {
   background-color: #dadada !important;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .navbar-brand {
@@ -43,6 +50,29 @@ html {
 .navbar-brand {
   font-family: "Carter One", cursive !important;
   font-family: "Poppins", sans-serif;
+}
+.div-nombreUsuario-salir{
+  display: flex;
+  font-family: "Carter One", cursive !important;
+  font-family: "Poppins", sans-serif;
+  width: 20%;
+  margin-top: 1.5%;
+
+}
+.div-Usuario-salir{
+  font-family: "Carter One", cursive !important;
+  font-family: "Poppins", sans-serif;
+  width: 20%;
+  margin-top: 1.5%;
+
+}
+.a-div-nombreUsuario-salir{
+  margin-left: 12px;
+
+}
+.nav-link{
+  padding-left: 5%;
+  font-size: 15px;
 }
 
 /*Main */
@@ -81,7 +111,50 @@ main {
 .contenedor-tabla_productos {
   margin-top: 0%;
 }
+.contenedor-boton-nuevoArticulo{
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 20vh;
 
+}
+.contenedor-padre-insertar-producto{
+  display: flex;
+  justify-content: center; /* Centramos horizontalmente */
+  align-items: center; /* Centramos verticalmente */
+  height: 100vh; /* Establece la altura del contenedor para que ocupe toda la altura de la ventana */
+  background-color: #f0f0f0; 
+  font-family: "Carter One", cursive !important;
+  font-family: "Poppins", sans-serif;
+
+}
+.contenedor-insertar-producto{
+  text-align: center; /* Centra el contenido del div */
+    padding: 1em; /* Espaciado interno para que se vea más prolijo en unidades em */
+    border: 1px solid #ccc;
+
+}
+.contenedor-insertar-producto label,input,textarea,button {
+  display: block; 
+    margin: 0.5em 0;
+
+}
+.contenedor-insertar-producto input, textarea {
+  width: 100%;
+  padding: 0.5em;
+
+}
+.contenedor-insertar-producto button {
+  cursor: pointer;
+  margin: 1em 0;
+  margin-left: 9em;
+
+}
+
+.boton-agregar-producto{
+  text-decoration: none;
+  color: white;
+}
 /*Imagenes del box de productos*/
 
 .div-primerImagen-boxProductos {
@@ -89,12 +162,21 @@ main {
   margin-top: 8%;
   padding-left: 25%;
   padding-right: 25%;
+  padding-bottom: 10%;
+}
+.div-segundaImagen-boxProductos{
+  width: 100%;
+  
+  padding-left: 25%;
+  padding-right: 25%;
   padding-bottom: 25%;
+
 }
 
 .img-fluid {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
+  margin-left: 15%;
 }
 
 /*Texto de los productos*/
@@ -363,3 +445,22 @@ button {
 }
 
 /**/
+
+
+
+footer {
+  
+  color: black;
+  padding: 1em;
+  
+ padding-bottom: 0;
+ padding-left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    font-size: 0.875em; /* Reducir el tamaño del texto en pantallas más pequeñas */
+  }
+}

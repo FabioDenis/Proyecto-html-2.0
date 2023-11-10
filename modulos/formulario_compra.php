@@ -1,56 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <!--Fuente-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Poppins:wght@200;300;700&display=swap" rel="stylesheet">
-    <!---->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Poppins&display=swap" rel="stylesheet">
-
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="Estilos/estilo.css" />
-    <title>Formulario_Compra</title>
-<body>
-
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Hala.Ind</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                  </li>
-                  
-                  <li class="nav-item">
-                    <a class="nav-link" href="tabla_productos.html">Tabla Productos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="box_prductos.html">Box Productos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Contacto</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-
-    </header>
    <!--main-->
     <div class="contener-formulario-compra">
 
-        <form class="row g-3 needs-validation" novalidate>
+        <form class="row g-3 needs-validation" action="index.php?modulo=formulario_compra" novalidate>
             <div class="col-md-4">
               <label for="validationCustom01" class="form-label">Nombres</label>
               <input type="text" class="form-control" id="validationCustom01" value="" required>
@@ -118,11 +70,3 @@
             </div>
           </form>
 
-    </div>
-     <!--Widget chat de wpp-->
-     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-     <div class="elfsight-app-dae422f1-2f6b-4de2-910f-79afe21f2183"></div>
-     <!--------------------------------------------------------------------------------------------------------> 
-  <script src="js/bootstrap.min.js"></script>
-</body>
-</html>

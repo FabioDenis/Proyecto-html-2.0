@@ -1,0 +1,45 @@
+.contenedor-login {
+    font-family: "Carter One", cursive !important;
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.contenedor-formulario-login {
+    background: #fff;
+    border-radius: 5%;
+    box-shadow: 0 0 2%;
+    padding: 2%;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.contenedor-formulario-login h2 {
+    margin: 0 0 5%;
+}
+
+.contenedor-formulario-login form {
+    text-align: left;
+}
+
+.contenedor-formulario-login input {
+    width: 100%;
+    padding: 5%;
+    margin-bottom: 5%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contenedor-formulario-login button {
+    width: 100%;
+    padding: 5%;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

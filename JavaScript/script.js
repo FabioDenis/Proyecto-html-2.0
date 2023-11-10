@@ -19,12 +19,19 @@ btnSiguiente.addEventListener("click", () => {
   noticias[noticiaActual].style.display = "block";
 });
 
-//Funcion Boton Comprar ficha del producto//
+// Selecciona el botón por su id
+var boton = document.getElementById("botondecompra");
 
-const botonComprar = document.getElementById("botonComprar");
+// Añade un evento de clic al botón
+boton.addEventListener("click", function() {
+  // Obtiene la url de la sección a la que quieres redireccionar
+  var url = "index.php?modulo=formulario_compra";
 
-// Agregar un evento de clic al botón
-botonComprar.addEventListener("click", function () {
-  // Cambiar la URL para redirigir al usuario a otra página
-  window.location.href = "formulario_compra.html"; // Reemplaza con la URL deseada
+  // Redirecciona la ventana actual a la url
+  window.location.href = url;
 });
+
+
+
+
+
