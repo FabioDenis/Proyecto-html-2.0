@@ -1,5 +1,5 @@
 <?php
-$sql = "SELECT *FROM productos";
+$sql = "SELECT * FROM productos WHERE eliminado=0 ";
 $sql = mysqli_query($con, $sql);
 if (mysqli_num_rows($sql) != 0) {
     while ($r = mysqli_fetch_array($sql)) {
