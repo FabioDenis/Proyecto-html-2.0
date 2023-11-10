@@ -8,7 +8,7 @@ $sql = mysqli_query($con, $sql);
   <table class="table">
     <thead>
       <tr>
-        <th scope="Col">Producto</th>
+        
         <th scope="col">ID</th>
         <th scope="col">Precio</th>
         <th scope="col">Descripcion</th>
@@ -19,19 +19,20 @@ $sql = mysqli_query($con, $sql);
     <tbody class="table-group-divider">
 
       <?php
-          $sql = "SELECT id, nombre, descripcion, precio FROM productos where eliminado = 0 ORDER BY nombre";
+          $sql = "SELECT id, nombre, descripcion, precio FROM productos where eliminado=0 ORDER BY nombre";
           $sql = mysqli_query($con, $sql);
       if (mysqli_num_rows($sql) != 0) {
         while ($r = mysqli_fetch_array($sql)) {
           ?>
           <tr>
-            <th scope="row">Remera</th>
+            
             <td><?php echo $r['id'];?></td>
             <td><?php echo $r['nombre'];?></td>
             <td><?php echo $r['precio'];?></td>
             <td><?php echo $r['descripcion'];?></td>
-            <td><button><a href="index.php?modulo=insertar_producto&accion=editar&id=<?php echo $r['id'];?>">Editar</a></button></td>
-            <td><button><a href="javascript:if(confirm('Desea eliminar el Producto?')) window.location='index.php?modulo=tabla_productos&accion=guardar_eliminar&id=<?php echo $r['id'];?>'">Eliminar</a></button></td>
+            <td><button><a class="a-editar-eliminar" href="index.php?modulo=insertar_producto&accion=editar&id=<?php echo $r['id'];?>">Editar</a></button></td>
+            <td><button> <a class="a-editar-eliminar"  href="javascript:if(confirm('Desea eliminar el producto ?')) window.location='index.php?modulo=insertar_producto&accion=guardar_eliminar&id=<?php echo $r['id'];?>'">Eliminar</a>
+          </button></td>
           </tr>
           <?php
         }

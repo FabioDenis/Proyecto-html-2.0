@@ -7,7 +7,7 @@ if (mysqli_num_rows($sql) != 0) {
       <div class="contenedor-Imgenes-boxProductos">
         <div class="div-primerImagen-boxProductos">
           <p class="fs-1"><?php echo $r ['nombre'];?></p>
-          <a href="index.php?modulo=ficha_producto"
+          <a  href="index.php?modulo=ficha_producto&accion=ver_ficha&id=<?php echo $r['id']; ?>"
             ><img
               src="Imagenes/<?php echo $r ['foto'];?>"
               class="img-fluid"

@@ -155,6 +155,11 @@ main {
   text-decoration: none;
   color: white;
 }
+.a-editar-eliminar{
+  text-decoration: none;
+  color: white;
+
+}
 /*Imagenes del box de productos*/
 
 .div-primerImagen-boxProductos {
@@ -162,7 +167,7 @@ main {
   margin-top: 8%;
   padding-left: 25%;
   padding-right: 25%;
-  padding-bottom: 10%;
+  
 }
 .div-segundaImagen-boxProductos{
   width: 100%;
@@ -199,6 +204,7 @@ main {
 }
 .div-carrusel-ficha_producto {
   width: 100%;
+
 }
 
 /*Texto que va al lado del carrusel en la ficha del producto*/
@@ -207,6 +213,8 @@ main {
 }
 .div-texto-ficha_producto {
   padding: 15%;
+  font-family: "Carter One", cursive !important;
+  font-family: "Poppins", sans-serif;
 }
 /*Texto Remera y precio de la ficha producto*/
 .h3,
@@ -214,11 +222,18 @@ h3 {
   font-size: calc(1.3rem + 0.6vw);
   font-family: "Carter One", cursive;
   font-family: "Poppins", sans-serif;
+ 
 }
+.h6{
+  font-family: "Poppins", sans-serif;
+
+}
+
 .fw-semibold {
   font-weight: 600 !important;
   font-family: "Carter One", cursive;
   font-family: "Poppins", sans-serif;
+  font-size: 1.3em;
 }
 /*--------------------------------------------*/
 /*----------------------------------------------------------*/
