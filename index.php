@@ -56,12 +56,14 @@ conectar();
                <?php
             if (isset($_SESSION['nombre-usuario'])) {
               ?>
+                
                <?php
               if  ($_SESSION['rol'] == 1)  {
                 ?>
                <li class="nav-item">
                 <a class="nav-link" href="index.php?modulo=tabla_productos">Tabla Productos</a>
               </li>
+             
               <?php
 
               }
@@ -69,13 +71,19 @@ conectar();
               </div>
                   <div class="div-nombreUsuario-salir">
                       <p>
+                          
                           <?php echo $_SESSION['nombre-usuario'] ?>  
+                          
                           <a class="a-div-nombreUsuario-salir" class="div-Usuario-salir" href="index.php?modulo=iniciar_sesion&salir=ok">Salir </a> 
-                            
+                         
                       </p>
-                      
-                      
-                  </div>    
+                      <p class="p-carrito">
+                      <a href="index.php?modulo=carrito"><img src="Imagenes/carrito2.png"  width ="30px" alt=""></a>
+
+                      </p>
+                       
+                  </div>   
+                  
               <?php
       
               } else{

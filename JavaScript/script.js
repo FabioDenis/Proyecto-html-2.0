@@ -25,7 +25,7 @@ var boton = document.getElementById("botondecompra");
 // Añade un evento de clic al botón
 boton.addEventListener("click", function() {
   // Obtiene la url de la sección a la que quieres redireccionar
-  var url = "index.php?modulo=formulario_compra";
+  var url = "index.php?modulo=carrito";
 
   // Redirecciona la ventana actual a la url
   window.location.href = url;
