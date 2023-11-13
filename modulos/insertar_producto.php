@@ -102,7 +102,7 @@ if($_GET['accion'] == 'guardar_eliminar')
             <?php
             if (!empty($r['foto'])) {
             ?>
-                <img src="imagenes/<?php echo $r['foto']; ?>" width="10%">
+                <img src="imagenes/<?php echo $r['foto']; ?>" width="20%">
             <?php
             }
             ?>

@@ -68,6 +68,7 @@ body{
 }
 .a-div-nombreUsuario-salir{
   margin-left: 12px;
+  text-decoration: none;
 
 }
 .p-carrito{
@@ -125,7 +126,7 @@ main {
   display: flex;
   justify-content: center; /* Centramos horizontalmente */
   align-items: center; /* Centramos verticalmente */
-  height: 100vh; /* Establece la altura del contenedor para que ocupe toda la altura de la ventana */
+   /* Establece la altura del contenedor para que ocupe toda la altura de la ventana */
   background-color: #f0f0f0; 
   font-family: "Carter One", cursive !important;
   font-family: "Poppins", sans-serif;
@@ -133,8 +134,9 @@ main {
 }
 .contenedor-insertar-producto{
   text-align: center; /* Centra el contenido del div */
-    padding: 1em; /* Espaciado interno para que se vea más prolijo en unidades em */
-    border: 1px solid #ccc;
+  padding: 1em; /* Espaciado interno para que se vea más prolijo en unidades em */
+  border: 1px solid #ccc;
+  margin-top: 5%;
 
 }
 .contenedor-insertar-producto label,input,textarea,button {
@@ -189,7 +191,7 @@ main {
 
 /*Texto de los productos*/
 .fs-1 {
-  font-family: "Carter One", cursive;
+  font-family: "Carter One", cursive !important;
   font-family: "Poppins", sans-serif;
   margin-bottom: 0%;
   text-align: center;
@@ -239,25 +241,7 @@ h3 {
   font-size: 1.3em;
 }
 /*--------------------------------------------*/
-/*----------------------------------------------------------*/
-/*Color del boton COMPRAR en ficha_productos*/
-.btn-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #070707;
-  --bs-btn-border-color: #050506;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #dadada;
-  --bs-btn-hover-border-color: #dadada;
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #dadada;
-  --bs-btn-active-border-color: #0a53be;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #0d6efd;
-  --bs-btn-disabled-border-color: #0d6efd;
-}
-/*------------------------------------------------------------------------*/
+
 
 /*Estilos Formulario Compra*/
 
@@ -267,6 +251,113 @@ h3 {
   margin-left: 0px;
 }
 
+.contenedor-central {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Carter One", cursive !important;
+  font-family: "Poppins", sans-serif;;
+}
+
+.contenedor-formulario {
+  max-width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+.etiqueta-formulario {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.entrada-formulario,
+.select-formulario {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.boton-formulario {
+  background-color: #dadada;
+  color: black;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.boton-formulario:hover {
+  background-color: #2980b9;
+}
+
+@media screen and (min-width: 768px) {
+  .contenedor-formulario {
+      max-width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contenedor-formulario {
+      max-width: 50%;
+  }
+}
+
+/*Seccion Login*/
+.contenedor-login {
+  font-family: "Carter One", cursive !important;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.contenedor-formulario-login {
+  background: #fff;
+  border-radius: 5%;
+  box-shadow: 0 0 2%;
+  padding: 2%;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.contenedor-formulario-login h2 {
+  margin: 0 0 5%;
+}
+
+.contenedor-formulario-login form {
+  text-align: left;
+}
+
+.contenedor-formulario-login input {
+  width: 100%;
+  padding: 5%;
+  margin-bottom: 5%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contenedor-formulario-login button {
+  width: 100%;
+  padding: 5%;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 /*-----------------------------------------------*/
 
 /*Carrusel Index*/
@@ -483,7 +574,7 @@ footer {
   }
 }
 
-
+/* Seccion Carrito*/
 .div-titulo-carrito{
   text-align: center;
   margin-bottom: 2%;
@@ -507,4 +598,59 @@ footer {
 
 .a-eliminar-continuar:hover {
   background-color: #2980b9;
+}
+
+/*------------------------------------------------------*/
+
+/*Seccion Mis Compras*/
+
+.tabla-mis-compras-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgb(96 204 101);
+}
+
+.tabla-mis-compras {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-mis-compras th,
+.tabla-mis-compras td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-mis-compras th {
+  background-color: #5bdc53c7;
+}
+
+.tabla-mis-compras tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.texto-miscompras{
+  text-align: center;
+background-color: #5bdc53c7;
+margin-top: 2%;
+font-family: "Carter One", cursive !important;
+font-family: "Poppins", sans-serif;
+font-size: 1.5em;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+  .tabla-mis-compras th,
+  .tabla-mis-compras td {
+      padding: 10px;
+  }
+
+  .accion-enlace {
+      display: block;
+      margin-bottom: 10px;
+  }
 }

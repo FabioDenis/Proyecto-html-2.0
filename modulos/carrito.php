@@ -45,13 +45,15 @@ if ($_GET['accion'] == 'eliminar_carrito') {
             while ($r = mysqli_fetch_array($sql)) {
         ?>
                 <tr>
-                    <th scope="row"><?php echo $r['id_producto']; ?></th>
+                    <td scope="row"><?php echo $r['id_producto']; ?></td>
                     <td class="table-active"><?php echo $r['nombre']; ?></td>
                     <td><?php echo $r['precio']; ?>$</td>
                     <td class="table-active"><?php echo $r['cantidad']; ?></td>
                     <td>
-                        <a class="a-eliminar-continuar" href="javascript:if(confirm('Desea eliminar el producto del carrito?')) window.location='index.php?modulo=carrito&accion=eliminar_carrito&id=<?php echo $r['id_producto']; ?>'">Eliminar</a>
-                        <a class="a-eliminar-continuar" href="index.php?modulo=formulario_compra">Continuar</a>
+                     
+                            <a class="a-eliminar-continuar mb-2" href="javascript:if(confirm('Desea eliminar el producto del carrito?')) window.location='index.php?modulo=carrito&accion=eliminar_carrito&id=<?php echo $r['id_producto']; ?>'">Eliminar</a>
+                            <a class="a-eliminar-continuar" href="index.php?modulo=formulario_compra&accion=form_compra&id=<?php echo $id_usuario; ?>">Continuar</a>
+                    
                     </td>
                 </tr>
         <?php
