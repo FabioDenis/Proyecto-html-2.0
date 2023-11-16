@@ -3,11 +3,9 @@
 //cerrar sesion
 if(isset($_GET['salir']))
 {
-    session_destroy();
+   session_destroy();
     echo "<script>window.location='index.php';</script>";
 }
-
-
 if (isset($_POST['nombre']) && isset($_POST['clave'])) {
     $sql = "SELECT * FROM usuarios WHERE nombre = '" . $_POST['nombre'] . "' AND clave = '" . $_POST['clave'] . "'";
     $sql = mysqli_query($con, $sql);

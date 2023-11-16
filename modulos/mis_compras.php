@@ -58,16 +58,30 @@ if ($resultado_compras) {
                     </table>
                 </div>
                 <br>
-
 <?php
             }
         }
         ?>
-
 <?php
     }
 }
 ?>
+<?php
+    // Llamar al procedimiento almacenado para contar compras
+      // Reemplaza con el ID de tu usuario
+    $result = $con->query("CALL contar_compras_usuario($id_usuario)");
+
+    // Mostrar la cantidad de compras
+    if ($result) {
+        $row = $result->fetch_assoc();
+        echo '<p class="p-cantidad-compras"><strong>Cantidad de Compras: ' . $row['Cantidad de Compras del Usuario'] . '</strong></p>';
+    } else {
+        echo "Error al contar las compras: " . $conn->error;
+    }
+?>
+
+
+
 
 
 

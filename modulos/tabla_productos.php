@@ -8,7 +8,6 @@ $sql = mysqli_query($con, $sql);
   <table class="table">
     <thead>
       <tr>
-        
         <th scope="col">ID</th>
         <th scope="col">Precio</th>
         <th scope="col">Descripcion</th>

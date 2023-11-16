@@ -186,7 +186,13 @@ main {
 .img-fluid {
   max-width: 70%;
   height: auto;
-  margin-left: 15%;
+  margin-left: 15% !important;
+
+}
+.boton-ordenar-productos{
+  margin-left: 5%;
+    margin-top: 3%;
+
 }
 
 /*Texto de los productos*/
@@ -640,6 +646,11 @@ font-family: "Carter One", cursive !important;
 font-family: "Poppins", sans-serif;
 font-size: 1.5em;
 
+}
+.p-cantidad-compras{
+  border: 1px solid #000;
+    width: 21%;
+    margin-left: 1%;
 }
 
 

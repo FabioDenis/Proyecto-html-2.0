@@ -8,7 +8,7 @@ if ($_GET['accion'] == 'form_compra') {
     <div class="contenedor-central">
         <div class="contenedor-formulario">
             <h2>Formulario de Compra</h2>
-            <form id="formularioCompra" action="index.php?modulo=formulario_compra&accion=cargar_direccion&&accion=confirmar_compra" method="post">
+            <form id="formularioCompra" action="index.php?modulo=formulario_compra&accion=confirmar_compra" method="post">
                 <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
                     <div style="width: 100%;">
                         <label for="nombre" class="etiqueta-formulario">Nombre:</label>
@@ -19,17 +19,10 @@ if ($_GET['accion'] == 'form_compra') {
                         <input type="text" id="apellido" name="apellido" class="entrada-formulario" required>
                     </div>
                     <div style="width:100%;">
-                        <label for="direccion" class="etiqueta-formulario">Dirección:</label>
+                        <label for="direccion" class="etiqueta-formulario">Dirección:(Especifique ciudad)</label>
                         <input type="text" id="direccion" name="direccion" class="entrada-formulario" required>
                     </div>
-                    <div style="width: calc(50% - 10px);">
-                        <label for="ciudad" class="etiqueta-formulario">Ciudad:</label>
-                        <input type="text" id="ciudad" name="ciudad" class="entrada-formulario" required>
-                    </div>
-                    <div style="width: calc(50% - 10px);">
-                        <label for="codigoPostal" class="etiqueta-formulario">Código Postal:</label>
-                        <input type="text" id="codigoPostal" name="codigoPostal" class="entrada-formulario" required>
-                    </div>
+
                     <div style="width: 100%;">
                         <label for="medioPago" class="etiqueta-formulario">Medio de Pago:</label>
                         <select id="medioPago" name="medioPago" class="select-formulario" required>
@@ -40,35 +33,21 @@ if ($_GET['accion'] == 'form_compra') {
                     </div>
                 </div>
   
-                <button type="submit" class="boton-formulario">Cargar info</button>
+                <button type="submit" class="boton-formulario">Realizar Compra</button>
             </form>
-
-            <!-- Botón "Realizar Compra" inicialmente oculto -->
-            <button id="botonConfirmarCompra" style="display: none;" type="submit" class="boton-formulario">Realizar Compra</button>
         </div>
     </div>
     <?php
 }
 
-if ($_GET['accion'] == 'cargar_direccion') {
-    // CARGAR DIRECCION
-    $id_usuario = $_SESSION['id'];
-    $direccion = $_POST['direccion'];
-    $ciudad = $_POST['ciudad'];
-    $codigo_postal = $_POST['codigoPostal'];
-    $sql = "INSERT INTO direccion (id_usuario, direccion, ciudad, codigo_postal) VALUES ('$id_usuario', '$direccion', '$ciudad', '$codigo_postal')";
-    $sql = mysqli_query($con, $sql);
-    if (mysqli_error($con)) {
-        echo "<script> alert('ERROR NO SE PUDO GUARDAR LA DIRECCION');</script>";
-    } else {
-        echo "<script> alert('Direccion guardada con éxito');</script>";
-    }
-}
+
 
 if ($_GET['accion'] == 'confirmar_compra') {
     $id_usuario = $_SESSION['id'];
-    $metodo_pago = $_POST['medioPago'];  // Añadí el punto y coma aquí
-    $sql = "INSERT INTO compras (id_usuario, metodo_pago, total) VALUES ('$id_usuario', '$metodo_pago', 0)";
+    $direccion= $_POST['direccion'];
+    $metodo_pago = $_POST['medioPago'];
+   
+    $sql = "INSERT INTO compras (id_usuario, direccion, metodo_pago, total) VALUES ('$id_usuario','{$direccion}','$metodo_pago', 0)";
     $sql = mysqli_query($con, $sql);
     $id_compra = mysqli_insert_id($con);
 
